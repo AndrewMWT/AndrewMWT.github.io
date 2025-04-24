@@ -2,6 +2,9 @@
 // This section loads modules.  It loads the Express server and stores
 // it in "express", then creates a application, a router, and a path handler
 const express = require('express');
+
+
+
 const app = express();
 const router = express.Router();
 const path = require('path');
@@ -27,6 +30,7 @@ router.get('/', function(req, res){
 });
 
 app.use("/", router);
+
 
 router.get('/api/grades',function(req, res){
     pool.query(
